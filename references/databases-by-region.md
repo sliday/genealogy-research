@@ -1,5 +1,9 @@
 # Genealogy Databases by Region
 
+This is the quick regional index. For deeper country, department/province, diocese,
+municipality, and genealogical-society coverage with native-language query terms, use
+[local-databases-by-country.md](local-databases-by-country.md).
+
 ## Table of Contents
 - [Universal](#universal)
 - [Poland / former Russian Empire](#poland--former-russian-empire)
@@ -14,9 +18,17 @@
 - [Czech Republic / Slovakia / Hungary](#czech-republic--slovakia--hungary)
 - [United States](#united-states)
 - [Canada](#canada)
+- [Australia / New Zealand](#australia--new-zealand)
 - [Latin America](#latin-america)
 - [Jewish Records](#jewish-records)
 - [DNA and Genetic Genealogy](#dna-and-genetic-genealogy)
+
+---
+
+This file is a geographic discovery index. It does **not** grant permission to
+automate any listed service. For official APIs, exports, open-data protocols,
+manual-only services, rate/rights notes, and evidence use, see
+[source-access-catalog.md](source-access-catalog.md).
 
 ---
 
@@ -27,6 +39,7 @@
 | FamilySearch | familysearch.org | Largest free base: vitals, censuses, immigration, military | Free (registration) |
 | Ancestry | ancestry.com | Censuses, immigration, military, newspapers | Subscription |
 | MyHeritage | myheritage.com | Records, DNA tests, Smart Matches | Subscription |
+| YourRoots | yourroots.com | GEDCOM map, FamilySearch-connected genealogy hints, AI research, DNA matching | Free/premium; manual account |
 | Geneanet | geneanet.org | European genealogy, user-submitted trees | Free/subscription |
 | FindAGrave | findagrave.com | Cemetery records worldwide | Free |
 | BillionGraves | billiongraves.com | GPS-tagged headstone photos | Free/subscription |
@@ -223,9 +236,29 @@
 
 | Service | URL | What it contains | Access |
 |---------|-----|-----------------|--------|
-| LAC | bac-lac.gc.ca | Library and Archives Canada: census, immigration, military | Free |
+| LAC Collection Search | canada.ca/en/library-archives/collection/search.html | Census, immigration, military, land, citizenship and archival fonds | Free |
+| Canadiana / Héritage | canadiana.ca / heritage.canadiana.ca | Digitized publications and LAC archival microfilm | Free |
 | Ancestry.ca | ancestry.ca | Canadian records | Subscription |
 | Automne.com | automne.com | Quebec vital records | Free |
+
+---
+
+## Australia / New Zealand
+
+| Service | URL | What it contains | Access |
+|---------|-----|-----------------|--------|
+| Trove | trove.nla.gov.au | Australian newspapers, books, people, archives, images | Free/API key for API |
+| National Archives of Australia RecordSearch | recordsearch.naa.gov.au | Immigration, citizenship, defence/service and government records | Free/manual |
+| State archives and libraries | varies by state/territory | Civil indexes, probate, land, court, asylum, prison and local records | Free/manual |
+| Papers Past | paperspast.natlib.govt.nz | New Zealand newspapers, periodicals, letters, parliamentary papers and books | Free |
+| DigitalNZ | digitalnz.org | Aggregated New Zealand cultural and archival metadata | Free/API |
+| Archives New Zealand Collections Search | collections.archives.govt.nz | Immigration, military, court, probate, land, education and government archives | Free/manual |
+| Births, Deaths and Marriages Historical Records NZ | bdmhistoricalrecords.dia.govt.nz | Historical civil-registration indexes within privacy cutoffs | Free/manual |
+
+**Tips:**
+- Trove/Papers Past OCR is a finding aid; inspect and cite the newspaper page image
+- DigitalNZ points to a contributing institution; cite the institution's source item
+- National/state archive catalogs often describe a series or file, not a name-level event
 
 ---
 

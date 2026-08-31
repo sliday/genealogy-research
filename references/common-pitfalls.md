@@ -44,6 +44,17 @@
 - **Always check date coverage** before concluding "not found"
 - Solution: find original scans (Skanoteka, Szukaj w Archiwach, FamilySearch microfilms) and browse manually
 
+### Discovery Result Mistaken for Evidence
+- Search hints, user trees, indexes, OCR, and AI transcriptions identify candidates; they do not by themselves prove identity or relationship
+- Preserve the provider's record ID and collection metadata, then inspect the underlying image or archival record when available
+- Attach the citation to the exact GEDCOM assertion it supports, not merely to the person
+
+### Undocumented Endpoint Mistaken for Permission
+- A JSON request visible in browser developer tools is not automatically a supported public API
+- Prefer official APIs, exports, bulk datasets, IIIF, OAI-PMH, SRU, and OpenSearch
+- Do not bypass login, CAPTCHA, paywalls, rate limits, robots controls, or provider restrictions
+- For subscription/manual-only services, use the user's browser or official download and analyze the artifact locally
+
 ### Indexer Errors
 - Volunteer indexers make mistakes: wrong names, transposed digits, misread letters
 - **Never trust an index as the final source** — always verify against the scan when available
@@ -153,15 +164,34 @@
 - **Every identification must have evidence.** "Same first name in same village" is not proof — it's a hypothesis
 - Always consider: could this be a different person?
 
+### Automated Same-Person Merges
+- A name/date similarity score can rank candidates but cannot prove identity
+- Require correlation across place, chronology, relatives/associates, occupation/address/religion, and record identifiers
+- Treat incompatible parents/spouses, impossible chronology, or irreconcilable simultaneous residences as hard contradictions
+- Present merges, relationship changes, and deletions as reviewable patches before editing the GEDCOM
+
 ### Ignoring Negative Evidence
 - "Not found" is not nothing — it's data that eliminates possibilities
-- Document every search that returned zero results: database, parameters, date range
-- Negative evidence narrows down where the family WASN'T
+- Document every zero-result search: database, collection, parameters, date range, place, denomination, variants, and coverage
+- Treat the result as negative evidence only if the person should have appeared and the relevant records are substantially complete and searchable
+- Otherwise label it "not indexed," "not online," "coverage unknown," or "not searched"
 
 ### Single-Source Reliance
 - One index entry is a lead, not a conclusion
-- **Minimum for "Proven" status:** original document scan, or 2+ independent derivative sources agreeing
-- Even original documents can contain errors (scribe mistakes, informant inaccuracies)
+- "Proven" has no mechanical source-count minimum: it requires reasonably exhaustive research, complete citations, analysis/correlation, conflict resolution, and a sound written conclusion
+- Even original documents can contain errors (scribe mistakes, informant inaccuracies); evaluate each information item and informant
+- Multiple databases may repeat the same underlying record and are not independent corroboration
+
+### Weak or Non-Durable Citations
+- A homepage, search-results URL, or screenshot without context is not enough
+- Capture repository, collection/fonds/series, unit or volume, page/act/certificate/image, stable record ID, URL, and access date
+- Save raw API responses and full images before cropping or normalizing; preserve rights/access notes
+- Put literal transcription, translation, normalized values, and interpretation in separate fields or notes
+
+### Privacy Leakage
+- Do not upload a GEDCOM containing living people to a third party without authorization
+- Do not embed API keys, cookies, signed URLs, raw DNA, match identities, contact details, or private correspondence in GEDCOM notes
+- Respect provider privacy controls and record closure periods even when a URL is technically reachable
 
 ### Not Checking All Record Types
 For each time period, check:

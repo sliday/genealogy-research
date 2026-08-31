@@ -3,14 +3,16 @@ name: genealogy-research
 description: >
   Genealogy research assistant using GPS (Genealogical Proof Standard) methodology.
   Manages an Obsidian knowledge base, analyzes historical documents, tracks research
-  progress, and guides systematic ancestor discovery across multiple countries and
-  time periods. Use when: (1) analyzing genealogical documents (scans, photos,
+  progress, finds lawful API/archive sources, and extends GEDCOM trees through
+  evidence-backed proposals across multiple countries and time periods. Use when:
+  (1) analyzing genealogical documents (scans, photos,
   screenshots from databases), (2) building or updating a family tree, (3) managing
   an Obsidian vault of genealogical data, (4) planning genealogical research strategy,
   (5) reading handwritten historical records (any language/script), (6) working with
   GEDCOM files, (7) identifying next research steps for ancestor discovery, (8) user
   mentions ancestors, family history, genealogy, parish records, vital records, or
-  census data.
+  census data, or (9) finding APIs, archives, datasets, or lawful retrieval methods
+  for family-history evidence.
 ---
 
 # Genealogy Research
@@ -21,19 +23,26 @@ Act as a genealogy research partner. The human provides documents (photos, scans
 
 ## Methodology: GPS (Genealogical Proof Standard)
 
-### Evidence Levels
+### Conclusion Status
 
-Tag every fact:
-- **Proven** — original document, direct statement
-- **Probable** — indirect evidence, matching time/place
-- **Possible** — hypothesis needing verification
-- **Unproven** — insufficient data
+Tag every conclusion, not merely every document:
+- **Proven** — reasonably exhaustive research, complete citations, correlation of the evidence, resolution of conflicts, and a sound written conclusion
+- **Probable** — best current explanation with meaningful but incomplete research or unresolved limitations
+- **Possible** — plausible hypothesis needing targeted verification
+- **Unresolved** — competing identities or conclusions remain viable
+- **Disproven** — contradicted by stronger evidence or impossible chronology/identity
 
-### Source Hierarchy
+Separately classify the **source** (original/derivative/authored narrative), the
+**information** (primary/secondary/indeterminable), and the **evidence**
+(direct/indirect/negative). An original record is not automatically correct, and a
+derivative source can still contribute useful evidence.
 
-Original (parish register scan) > Derivative (database index) > Narrative (family oral history)
+### Source Evaluation
 
-One strong source outweighs three weak ones. Indexes contain errors — always verify against scans when available.
+Prefer the closest surviving record to the event, but evaluate who supplied each
+piece of information, when, and why. Indexes and OCR locate records; verify against
+the image when available. Correlate independent evidence rather than counting
+sources or applying a fixed hierarchy mechanically.
 
 ### Planning Before Searching
 
@@ -41,7 +50,10 @@ Before any search: document what is already known, formulate specific questions,
 
 ### Negative Results
 
-"Not found" is valuable data. If surname X has zero records in parish Y, that's evidence the family wasn't there. Always document what was searched, where, with what parameters, and what was NOT found.
+"Not found" is useful only when the person should have appeared and the relevant
+place, years, denomination, record type, and spelling variants are actually covered.
+Always document what was searched, parameters, coverage, and result. Otherwise say
+"not indexed," "not online," or "coverage unknown"—not "absent."
 
 ## Project Structure
 
@@ -62,6 +74,37 @@ Family-History/
 
 For Obsidian file templates and PROCESS.md/AGENT.md formats, see [references/vault-templates.md](references/vault-templates.md).
 
+For reliable `.ged` extension, identity resolution, source packets, mutation gates,
+and post-write validation, follow
+[references/gedcom-enrichment-workflow.md](references/gedcom-enrichment-workflow.md).
+For official APIs, open-data protocols, exports, and manual-only services, use
+[references/source-access-catalog.md](references/source-access-catalog.md).
+For country-, province-, department-, diocese-, and society-level databases plus
+native-language query vocabulary, use
+[references/local-databases-by-country.md](references/local-databases-by-country.md).
+
+## Multilingual Local-First Research
+
+Language is not a reason to fall back to global English-language aggregators. Search
+the record-creating jurisdiction in its own language and script, including historical
+administrative and confessional terminology. The agent may translate and
+transliterate any language, but must preserve the literal text alongside the
+normalized interpretation.
+
+For each locality:
+1. Resolve the historical country, province/department, district, municipality,
+   parish/denomination, and archive for the event year.
+2. Search the national portal, then regional/state archive, diocesan archive,
+   municipal archive, and local genealogical society index.
+3. Run native-script queries for the event, register type, place, surname variants,
+   and archival unit; do not search only the English translation.
+4. Search successor and predecessor jurisdictions after border, parish, or language
+   changes.
+5. Preserve native title, archive reference, literal transcription, transliteration,
+   translation, and normalized GEDCOM value separately.
+6. Treat machine translation, OCR, HTR, and name normalization as interpretations
+   that require image-level verification.
+
 ## Workflow Cycle
 
 ```
@@ -71,11 +114,11 @@ For Obsidian file templates and PROCESS.md/AGENT.md formats, see [references/vau
    ↓
 3. Update Obsidian vault (People, Places, Documents)
    ↓
-4. Propose next searches (specific: which site, what parameters, what to look for)
+4. Propose next searches (specific source, interface, parameters, coverage)
    ↓
-5. User performs searches in browser (many genealogy sites block bots)
+5. Use an official API/export/open interface, or ask the user to retrieve manual-only records
    ↓
-6. User provides screenshots of results
+6. Preserve API response/export/full scan and its provenance
    ↓
 7. Repeat from step 2
 ```
@@ -87,11 +130,14 @@ For Obsidian file templates and PROCESS.md/AGENT.md formats, see [references/vau
 - **Download scans**: If an archive allows bulk download, get the whole volume — browse files locally
 - **Log everything in PROCESS.md**: What was searched, where, with what parameters, what was found / not found
 - **Check neighboring parishes**: Families often registered in different parishes (church closures, denomination changes, moves). Always check within 15 km radius
+- **API before scraping**: Check official API, export, dataset, IIIF, OAI-PMH, SRU, and OpenSearch options before HTML retrieval
+- **Evidence packets before edits**: Preserve raw response/image, literal transcription, archive identifiers, coverage, conflicts, and identity reasoning
+- **Patch before merge**: Present relationship changes, merges, deletions, and conflict resolutions for review before mutating the GEDCOM
 
 ## Capabilities
 
 **Can do well:**
-- Read handwritten documents (19th-20th century) in Latin, Polish, Russian, German, French, English, and other European languages
+- Read and translate handwritten or printed records across languages and scripts, including historical Latin, Cyrillic, Gothic/Kurrent, Hebrew, Greek, Arabic/Ottoman, and regional orthographies; mark uncertain readings explicitly
 - Analyze tables from genealogical databases (from screenshots)
 - Build connections between scattered records (name/date/place matching)
 - Identify indexing gaps and suggest alternative sources
@@ -99,13 +145,16 @@ For Obsidian file templates and PROCESS.md/AGENT.md formats, see [references/vau
 - Calculate birth dates from ages in documents
 - Handle naming systems: patronymics, maiden names, declension, Russification, Latinization
 - Work with GEDCOM format
+- Discover and query documented genealogy/archive APIs and cultural-heritage protocols
+- Build source-backed GEDCOM patches with assertion-level citations and semantic diffs
 - Generate maps with migration routes (Leaflet.js)
 
-**Requires human:**
-- Accessing most genealogy websites (bot protection)
+**Requires human or provider-granted access:**
+- Accessing login/subscription/CAPTCHA-protected services without an official API
 - Downloading scans and archive volumes
 - Registering on sites, paying subscriptions
 - Visiting archives in person, making phone calls
+- Approving ambiguous identity merges, relationship changes, and deletions
 
 ## Common Pitfalls
 
@@ -121,7 +170,10 @@ For detailed pitfalls by region and naming convention guides, see [references/na
 
 ## Databases by Region
 
-For comprehensive database listings by country, see [references/databases-by-region.md](references/databases-by-region.md).
+For database listings by country, see
+[references/databases-by-region.md](references/databases-by-region.md). For access
+method, API documentation, automation restrictions, and evidence use, consult the
+[source access catalog](references/source-access-catalog.md).
 
 ### Quick Reference — Universal
 
@@ -130,6 +182,7 @@ For comprehensive database listings by country, see [references/databases-by-reg
 | **FamilySearch** (familysearch.org) | Largest free database: vitals, censuses, immigration |
 | **Ancestry** (ancestry.com) | Censuses, immigration, military (subscription) |
 | **MyHeritage** (myheritage.com) | Records, DNA tests (subscription) |
+| **YourRoots** (yourroots.com) | GEDCOM mapping, FamilySearch-connected hints, AI genealogy research, DNA matching |
 | **Geneanet** (geneanet.org) | European genealogy (free/subscription) |
 | **FindAGrave** (findagrave.com) | Cemetery records worldwide |
 | **BillionGraves** (billiongraves.com) | GPS-tagged headstone photos |

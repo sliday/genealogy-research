@@ -4,13 +4,16 @@ A comprehensive genealogy research assistant skill that turns Claude into a syst
 
 ## What It Does
 
-- **Analyzes historical documents**: Reads handwritten records in Latin, Polish, Russian, German, French, English, and other European languages
+- **Analyzes historical documents across languages and scripts**: Preserves literal text, script, transliteration, translation, and normalized interpretation separately
 - **Manages an Obsidian knowledge base**: Creates and maintains People, Places, Documents, and Events files with cross-references
 - **Tracks research progress**: Maintains PROCESS.md with completed actions, pending tasks, negative results, and evidence levels
 - **Guides systematic search**: Recommends specific databases, parishes, and parameters based on region and time period
 - **Handles naming complexity**: Understands patronymics, declension, transliteration, and scribe-era spelling variations across cultures
 - **Works with GEDCOM**: Import/export standard genealogy data format
-- **Covers 15+ countries**: Database references for Poland, Germany, Russia, UK, Ireland, France, Italy, Scandinavia, Czech Republic, Hungary, USA, Canada, and more
+- **Finds lawful machine-accessible sources**: Official APIs, exports, open datasets, IIIF, OAI-PMH, SRU, and archive portals
+- **Searches locally in native languages**: Country, province, department, diocese, municipality, and genealogical-society databases without defaulting to English-only aggregators
+- **Extends GEDCOM conservatively**: Builds evidence packets, resolves identity, proposes reviewable patches, cites assertions, and validates the result
+- **Covers dozens of jurisdictions**: National, provincial/departmental, municipal, diocesan, society, military, cemetery, newspaper, and migration sources across Europe, the Americas, and Oceania
 
 ## Installation
 
@@ -33,6 +36,10 @@ Copy the skill directory into your Claude Code skills location:
     ├── databases-by-region.md
     ├── naming-conventions.md
     ├── common-pitfalls.md
+    ├── source-access-catalog.md
+    ├── local-databases-by-country.md
+    ├── uk-ireland-local-sources.md
+    ├── gedcom-enrichment-workflow.md
     └── vault-templates.md
 ```
 
@@ -67,17 +74,23 @@ Start by analyzing the documents and building a research plan.
 | `references/databases-by-region.md` | 80+ databases across 15+ countries |
 | `references/naming-conventions.md` | Surname variations in Slavic, Germanic, Romance, Scandinavian, Jewish naming traditions |
 | `references/common-pitfalls.md` | Indexing gaps, parish reassignments, calendar issues, identity confusion |
+| `references/source-access-catalog.md` | Official APIs, open-data protocols, exports, manual-only services, access restrictions, and evidence use |
+| `references/local-databases-by-country.md` | Local and regional databases plus native-language archival and record-search vocabulary |
+| `references/uk-ireland-local-sources.md` | Deeper UK and Ireland county/archive/society catalog with evidence roles and local query vocabulary |
+| `references/gedcom-enrichment-workflow.md` | Reliable `.ged` enrichment: backups, research questions, evidence packets, identity resolution, patch review, citations, privacy, and validation |
 | `references/vault-templates.md` | Obsidian templates for People, Places, Documents + PROCESS.md and AGENT.md formats |
 
 ## Methodology
 
 Based on the Genealogical Proof Standard (GPS):
 
-1. **Evidence levels**: Every fact tagged as Proven / Probable / Possible / Unproven
-2. **Source hierarchy**: Original > Derivative > Narrative
+1. **Conclusion status**: Proven / Probable / Possible / Unresolved / Disproven, based on the whole evidence body
+2. **Evidence analysis**: Source type, information quality, and direct/indirect/negative evidence evaluated separately
 3. **Planning before searching**: Document knowns, formulate questions, identify sources
-4. **Negative results**: "Not found" is valuable evidence — always documented
-5. **Human + AI workflow**: Human provides documents and performs web searches; AI analyzes, connects, and maintains the knowledge base
+4. **Qualified negative results**: "Not found" counts only when coverage and expected appearance are established
+5. **API/export before scraping**: Use supported interfaces and never bypass access controls
+6. **Patch before merge**: Relationship edits, merges, and deletions are reviewed before mutation
+7. **Human + AI workflow**: APIs and exports provide reproducible artifacts; humans handle restricted access and ambiguous conclusions
 
 ## Origin
 
