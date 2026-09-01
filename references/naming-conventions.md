@@ -1,5 +1,7 @@
 # Naming Conventions and Surname Variations in Genealogy
 
+Reviewed: 2026-09-01.
+
 ## Table of Contents
 - [General Principles](#general-principles)
 - [Slavic Languages](#slavic-languages)

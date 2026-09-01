@@ -1,6 +1,6 @@
-# Genealogy Research Skill for Claude Code
+# Genealogy Research Skill
 
-A comprehensive genealogy research assistant skill that turns Claude into a systematic family history researcher using the [Genealogical Proof Standard](https://www.bcgcertification.org/ethics-standards/genealogical-proof-standard/) (GPS) methodology.
+An agent skill that turns a coding agent into a systematic family history researcher using the [Genealogical Proof Standard](https://www.bcgcertification.org/ethics-standards/) (GPS) methodology. The skill follows the [agentskills.io](https://agentskills.io/specification) format, so it works in Claude Code, Codex, Copilot CLI, Gemini CLI, Cursor, and any other runtime that reads `SKILL.md`.
 
 ## What It Does
 
@@ -9,7 +9,7 @@ A comprehensive genealogy research assistant skill that turns Claude into a syst
 - **Tracks research progress**: Maintains PROCESS.md with completed actions, pending tasks, negative results, and evidence levels
 - **Guides systematic search**: Recommends specific databases, parishes, and parameters based on region and time period
 - **Handles naming complexity**: Understands patronymics, declension, transliteration, and scribe-era spelling variations across cultures
-- **Works with GEDCOM**: Import/export standard genealogy data format
+- **Works with GEDCOM**: Import/export standard genealogy data format; ships a checker for validation and semantic diffs
 - **Finds lawful machine-accessible sources**: Official APIs, exports, open datasets, IIIF, OAI-PMH, SRU, and archive portals
 - **Searches locally in native languages**: Country, province, department, diocese, municipality, and genealogical-society databases without defaulting to English-only aggregators
 - **Extends GEDCOM conservatively**: Builds evidence packets, resolves identity, proposes reviewable patches, cites assertions, and validates the result
@@ -17,35 +17,41 @@ A comprehensive genealogy research assistant skill that turns Claude into a syst
 
 ## Installation
 
-### Claude Code (CLI)
+Copy or clone this directory into your runtime's skills folder:
+
+| Runtime | Path |
+|---------|------|
+| Claude Code | `~/.claude/skills/genealogy-research/` (or `.claude/skills/` inside a project) |
+| Codex, Copilot CLI, Gemini CLI | `~/.agents/skills/genealogy-research/` |
+| Cursor | `.cursor/skills/genealogy-research/` inside the project |
 
 ```bash
-claude install-skill /path/to/genealogy-research
+git clone https://github.com/sliday/genealogy-research ~/.claude/skills/genealogy-research
 ```
 
-Or copy the `genealogy-research/` directory to `~/.claude/skills/`.
-
-### Manual
-
-Copy the skill directory into your Claude Code skills location:
+`genealogy-research.skill` is the same content zipped for Claude Code's skill importer. Rebuild it with `sh scripts/package.sh` after editing.
 
 ```
-~/.claude/skills/genealogy-research/
+genealogy-research/
 ├── SKILL.md
-└── references/
-    ├── databases-by-region.md
-    ├── naming-conventions.md
-    ├── common-pitfalls.md
-    ├── source-access-catalog.md
-    ├── local-databases-by-country.md
-    ├── uk-ireland-local-sources.md
-    ├── gedcom-enrichment-workflow.md
-    └── vault-templates.md
+├── references/
+│   ├── databases-by-region.md
+│   ├── naming-conventions.md
+│   ├── common-pitfalls.md
+│   ├── source-access-catalog.md
+│   ├── local-databases-by-country.md
+│   ├── uk-ireland-local-sources.md
+│   ├── gedcom-enrichment-workflow.md
+│   └── vault-templates.md
+├── scripts/
+│   ├── gedcom_check.py
+│   └── package.sh
+└── evals/
 ```
 
 ## Usage
 
-Start a conversation with Claude Code in your family history project directory. The skill triggers automatically when you:
+Start a conversation with your agent in the family history project directory. The skill triggers automatically when you:
 
 - Share a scan or photo of a historical document
 - Ask about ancestors or family history
@@ -60,9 +66,9 @@ You are a genealogy research partner. My project is in this directory.
 
 Region: Poland / Russian Empire partition, 19th century
 Languages: Polish, Russian, Latin
-Obsidian vault: Chronicles/
+Obsidian vault: vault/
 
-I have scans of parish registers in materials/skany/.
+I have scans of parish registers in sources/.
 Start by analyzing the documents and building a research plan.
 ```
 
@@ -71,14 +77,16 @@ Start by analyzing the documents and building a research plan.
 | File | Purpose |
 |------|---------|
 | `SKILL.md` | Core methodology, workflow, capabilities |
-| `references/databases-by-region.md` | 80+ databases across 15+ countries |
+| `references/databases-by-region.md` | Quick index of the main databases by country and region |
 | `references/naming-conventions.md` | Surname variations in Slavic, Germanic, Romance, Scandinavian, Jewish naming traditions |
 | `references/common-pitfalls.md` | Indexing gaps, parish reassignments, calendar issues, identity confusion |
 | `references/source-access-catalog.md` | Official APIs, open-data protocols, exports, manual-only services, access restrictions, and evidence use |
 | `references/local-databases-by-country.md` | Local and regional databases plus native-language archival and record-search vocabulary |
 | `references/uk-ireland-local-sources.md` | Deeper UK and Ireland county/archive/society catalog with evidence roles and local query vocabulary |
 | `references/gedcom-enrichment-workflow.md` | Reliable `.ged` enrichment: backups, research questions, evidence packets, identity resolution, patch review, citations, privacy, and validation |
-| `references/vault-templates.md` | Obsidian templates for People, Places, Documents + PROCESS.md and AGENT.md formats |
+| `references/vault-templates.md` | Obsidian templates for People, Places, Documents, Events, Research + PROCESS.md and SOURCES.md formats |
+| `scripts/gedcom_check.py` | Stdlib GEDCOM checker: record counts, dangling cross-references, uncited assertions, possibly-living people, diff against a baseline |
+| `evals/` | Scenario prompts with pass/fail criteria for testing the skill |
 
 ## Methodology
 

@@ -1,5 +1,7 @@
 # Genealogy Databases by Region
 
+Reviewed: 2026-09-01. URLs and coverage change; re-check before use.
+
 This is the quick regional index. For deeper country, department/province, diocese,
 municipality, and genealogical-society coverage with native-language query terms, use
 [local-databases-by-country.md](local-databases-by-country.md).
@@ -52,17 +54,17 @@ manual-only services, rate/rights notes, and evidence use, see
 
 | Service | URL | What it contains | Access |
 |---------|-----|-----------------|--------|
-| Geneteka | geneteka.genealodzy.pl | 47M+ indexes of parish registers. **Use "pobliskie parafie (15km)" checkbox** | Free |
+| Geneteka | geneteka.genealodzy.pl | Indexes of parish registers. **Use "pobliskie parafie (15km)" checkbox** | Free |
 | Skanoteka | skanoteka.genealodzy.pl | Original scans of parish registers | Free |
 | Szukaj w Archiwach | szukajwarchiwach.gov.pl | Scans from Polish state archives | Free |
 | Geneszukacz | geneszukacz.genealodzy.pl | Meta-search across all PTG databases | Free |
 | Metryki.genealodzy.pl | metryki.genealodzy.pl | Indexed vital records with source links | Free |
 | Poznan Project | poznan-project.psnc.pl | Marriages from Greater Poland region | Free |
-| Baza PRADZIAD | szukajwarchiwach.gov.pl/pradziad | Directory of surviving parish books (what exists where) | Free |
+| Baza PRADZIAD | szukajwarchiwach.gov.pl | Directory of surviving parish books (what exists where) | Free |
 | Archiwum Diecezjalne | varies by diocese | Diocesan archives hold pre-1900 church books | Visit/mail |
 
 **Tips for Poland:**
-- Parish books before 1826: Latin. After 1826: Russian (Russian partition), German (Prussian), Polish (Austrian/Galicia)
+- Record language in the Russian partition: Latin church registers throughout; civil-register copies in Polish 1808–1867, Russian from 1868. Prussian partition: German. Austrian partition: Latin church books, later some Polish/German
 - Civil registration: 1808 (Duchy of Warsaw), continued in Russian partition. Austrian partition: church books served as civil records
 - Geneteka indexing is incomplete — check date coverage per parish
 - FamilySearch has microfilms of many Polish parishes — check catalog by place name
@@ -77,8 +79,8 @@ manual-only services, rate/rights notes, and evidence use, see
 | Matricula | data.matricula-online.eu | Catholic parish registers (Austria, Germany, Poland, others) | Free |
 | Ancestry.de | ancestry.de | German records, emigration lists | Subscription |
 | CompGen (Verein f. Computergenealogie) | compgen.de | Meta-directory of German genealogy resources | Free |
-| Kirchenbuchportal | kirchenbuchportal.de | Directory of church book locations | Free |
-| Standesamt | varies by town | Civil registration offices (from 1876 in Prussia, 1874 in rest) | Mail/visit |
+| GOV / GenWiki | gov.genealogy.net / wiki.genealogy.net | Historical place gazetteer and parish/archive routing | Free |
+| Standesamt | varies by town | Civil registration offices (Prussia from 1 Oct 1874, rest of German Empire from 1 Jan 1876) | Mail/visit |
 | Landesarchiv | varies by state | State archives hold older church and civil records | Visit/mail |
 
 **Tips for Germany:**
@@ -103,8 +105,8 @@ manual-only services, rate/rights notes, and evidence use, see
 
 **Tips for Russia:**
 - Parish registers (metricheskie knigi): births, marriages, deaths — held in regional archives (GARO, GASO, etc.)
-- Revision lists (reviziskie skazki): censuses from 1719–1858 — in regional or federal archives
-- Julian calendar until February 1918 — add 12–13 days for Gregorian equivalent
+- Revision lists (revizskie skazki): censuses from 1719–1858 — in regional or federal archives
+- Julian calendar until February 1918 — add 11 days (18th c.), 12 days (19th c.), 13 days (20th c.) for Gregorian equivalent
 - Confessional lists (ispovednye vedomosti): annual parish census — excellent for family reconstruction
 
 ---
@@ -113,10 +115,9 @@ manual-only services, rate/rights notes, and evidence use, see
 
 | Service | URL | What it contains | Access |
 |---------|-----|-----------------|--------|
-| NIAB | archives.gov.by | National Archive of Belarus | Visit/mail |
-| LVIA | virtualbiblioteka.lt | Lithuanian Historical Archive | Visit/mail |
-| LVVA | lvva.gov.lv | Latvian State Historical Archive | Visit/mail |
-| Genby | genby.by | Belarusian genealogy community | Free |
+| NIAB | niab.by | National Archive of Belarus | Visit/mail |
+| LVIA | lvia.archyvai.lrv.lt | Lithuanian Historical Archive | Visit/mail |
+| Latvian National Archives / Raduraksti | arhivi.gov.lv / raduraksti.arhivi.lv | Latvian State Historical Archive; church books, revision lists, censuses | Free (registration for scans) |
 | LitGenSoc | lithuaniangenealogy.org | Lithuanian genealogy resources | Free |
 
 ---
@@ -125,10 +126,10 @@ manual-only services, rate/rights notes, and evidence use, see
 
 | Service | URL | What it contains | Access |
 |---------|-----|-----------------|--------|
-| CDIAU | archives.gov.ua | Central State Historical Archives | Visit/mail |
+| TsDIAK (Central State Historical Archives, Kyiv) | tsdiak.archives.gov.ua | Central State Historical Archives | Visit/mail |
 | FamilySearch Ukraine | familysearch.org | Microfilms of Ukrainian parish books | Free (FS Center) |
-| Pencyclopedia | pra.in.ua | Ukrainian genealogy encyclopedia | Free |
-| AGADD | agad.gov.pl | Records of Right-Bank Ukraine (pre-1795) in Warsaw | Visit/mail |
+| Metric-book union catalog | genealogia.com.ua | Coverage guide to surviving Ukrainian metric books by place and archive | Free |
+| AGAD | agad.gov.pl | Records of Right-Bank Ukraine (pre-1795) in Warsaw | Visit/mail |
 
 ---
 
@@ -141,12 +142,12 @@ manual-only services, rate/rights notes, and evidence use, see
 | FreeCEN | freecen.org.uk | Census transcriptions | Free |
 | ScotlandsPeople | scotlandspeople.gov.uk | Scottish vital records, censuses, wills | Pay-per-view |
 | IrishGenealogy | irishgenealogy.ie | Irish civil records (1845/1864+) | Free |
-| PRONI | nidirect.gov.uk/proni | Northern Ireland records | Free/visit |
+| PRONI | proni.gov.uk | Northern Ireland records | Free/visit |
 | The National Archives | nationalarchives.gov.uk | Census, military, immigration | Free/subscription |
 | FindMyPast | findmypast.co.uk | UK & Ireland records, newspapers | Subscription |
 
 **Tips for UK/Ireland:**
-- Civil registration: England/Wales 1837, Scotland 1855, Ireland 1864
+- Civil registration: England/Wales 1837, Scotland 1855, Ireland 1845 (non-Catholic marriages), 1864 (all events)
 - Census: every 10 years from 1841 (England/Wales), 1841 (Scotland)
 - Many Irish records destroyed in 1922 Four Courts fire — church records often the only alternative
 
@@ -159,7 +160,7 @@ manual-only services, rate/rights notes, and evidence use, see
 | Archives Departementales | varies by department | Digitized parish and civil records | Free |
 | Filae | filae.com | French vital records index | Subscription |
 | Geneanet | geneanet.org | Strong French coverage | Free/subscription |
-| Archives de l'Etat (Belgium) | arch.be | Belgian state archives | Free |
+| Archives de l'Etat (Belgium) | search.arch.be | Belgian state archives | Free |
 
 **Tips for France:**
 - Civil registration from 1792 (Revolution). Church records before that
@@ -174,7 +175,6 @@ manual-only services, rate/rights notes, and evidence use, see
 |---------|-----|-----------------|--------|
 | Antenati | antenati.cultura.gov.it | Italian civil records (Stato Civile) | Free |
 | FamilySearch Italy | familysearch.org | Microfilms of Italian records | Free |
-| Portale Antenati | dl.antenati.cultura.gov.it | Scans of civil registration | Free |
 
 **Tips for Italy:**
 - Civil registration: 1809 (Napoleonic south), 1866 (unified Italy)
@@ -190,12 +190,12 @@ manual-only services, rate/rights notes, and evidence use, see
 | Arkiv Digital | arkivdigital.se | Swedish church books (scans) | Subscription |
 | Riksarkivet (Sweden) | riksarkivet.se | Swedish national archives | Free |
 | Digitalarkivet (Norway) | digitalarkivet.no | Norwegian church and census records | Free |
-| Arkivalieronline (Denmark) | sa.dk/ao | Danish church books and censuses | Free |
-| FFHA (Finland) | sukuhistoria.fi | Finnish church records | Free/subscription |
+| Arkivalieronline (Denmark) | rigsarkivet.dk | Danish church books and censuses | Free |
+| SSHY (Finland) | sukuhistoria.fi | Finnish church records | Free/subscription |
 
 **Tips for Scandinavia:**
 - Excellent record-keeping — church books from 1600s
-- Sweden: household examination rolls (husforhorslangor) track every person annually
+- Sweden: household examination rolls (husförhörslängder) track every person annually
 - Patronymic naming until 1800s–1900s (Andersson = son of Anders)
 - Farm names often used as surnames in Norway
 
@@ -206,10 +206,10 @@ manual-only services, rate/rights notes, and evidence use, see
 | Service | URL | What it contains | Access |
 |---------|-----|-----------------|--------|
 | Matricula | data.matricula-online.eu | Church books from Austrian Empire territories | Free |
-| DEA (Hungary) | dea.lib.unideb.hu | Hungarian church records | Free |
+| Hungaricana / MNL databases | hungaricana.hu / adatbazisokonline.mnl.gov.hu | Hungarian censuses, maps, archival documents, thematic databases | Free |
 | MNL (Hungary) | mnl.gov.hu | Hungarian National Archives | Visit/mail |
 | Porta Fontium | portafontium.eu | Czech-Bavarian border region records | Free |
-| SZSZK | familysearch.org | Slovak church books on FamilySearch | Free |
+| FamilySearch Slovakia | familysearch.org | Slovak church books (images) | Free |
 
 ---
 
@@ -217,8 +217,8 @@ manual-only services, rate/rights notes, and evidence use, see
 
 | Service | URL | What it contains | Access |
 |---------|-----|-----------------|--------|
-| Ellis Island | libertyellisfoundation.org | Immigration records (1892–1957) | Free |
-| Castle Garden | castlegarden.org | Pre-Ellis Island immigration (1820–1892) | Free |
+| Ellis Island | heritage.statueofliberty.org | Immigration records (1892–1957) | Free |
+| Pre-Ellis Island arrivals (1820–1891) | familysearch.org / archives.gov | New York passenger lists; castlegarden.org is offline | Free |
 | Fold3 | fold3.com | Military records | Subscription |
 | Newspapers.com | newspapers.com | Historical newspapers | Subscription |
 | USGenWeb | usgenweb.org | Free volunteer genealogy by state/county | Free |
@@ -239,7 +239,7 @@ manual-only services, rate/rights notes, and evidence use, see
 | LAC Collection Search | canada.ca/en/library-archives/collection/search.html | Census, immigration, military, land, citizenship and archival fonds | Free |
 | Canadiana / Héritage | canadiana.ca / heritage.canadiana.ca | Digitized publications and LAC archival microfilm | Free |
 | Ancestry.ca | ancestry.ca | Canadian records | Subscription |
-| Automne.com | automne.com | Quebec vital records | Free |
+| BAnQ Advitam | advitam.banq.qc.ca | Québec civil, notarial, census and archival descriptions | Free |
 
 ---
 
@@ -267,8 +267,8 @@ manual-only services, rate/rights notes, and evidence use, see
 | Service | URL | What it contains | Access |
 |---------|-----|-----------------|--------|
 | FamilySearch | familysearch.org | Extensive Latin American church records | Free |
-| Arquivo Nacional (Brazil) | an.gov.br | Brazilian national archives | Free |
-| AGN (Mexico) | agn.gob.mx | Mexican national archives | Free |
+| Arquivo Nacional (Brazil) | gov.br/arquivonacional | Brazilian national archives | Free |
+| AGN (Mexico) | gob.mx/agn | Mexican national archives | Free |
 
 ---
 

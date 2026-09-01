@@ -1,6 +1,6 @@
 # Local Genealogy Databases by Country
 
-Reviewed: 2026-08-31. This is the local-first companion to
+Reviewed: 2026-09-01. This is the local-first companion to
 [databases-by-region.md](databases-by-region.md) and
 [source-access-catalog.md](source-access-catalog.md). Re-check the official site,
 coverage, access rules, and privacy cutoffs before each project.
@@ -91,7 +91,7 @@ image is usually held by the departmental or municipal archive.
 | **Archives municipales** | Large-city and commune collections, sometimes including recent civil tables, censuses, electoral rolls and cemetery registers | Manual/local. Search the municipality when departmental holdings are incomplete. |
 | **Archives nationales d'outre-mer (ANOM)** — https://recherche-anom.culture.gouv.fr/ | Colonial and overseas civil registration, administration, military and migration records | Official catalog/images/manual. Record territory, commune, register and image. |
 | **Archives diplomatiques — état civil consulaire** — https://www.diplomatie.gouv.fr/fr/archives-bibliotheque/effectuer-des-recherches-genealogiques-ou-familiales/actes-d-etat-civil-et-autres-archives-diplomatiques-et-consulaires | French citizens abroad, consular/diplomatic civil records and requests | Official guidance/request workflow; privacy cutoffs apply. |
-| **Grand Mémorial** — https://www.culture.fr/Grand-Memorial | Federated First World War military recruitment and related name indexes | Name discovery; open the departmental matricule image and cite it. |
+| **Grand Mémorial** — https://www.culture.fr/Grand-Memorial (redirects; search 'Grand Mémorial' on culture.gouv.fr if the link breaks) | Federated First World War military recruitment and related name indexes | Name discovery; open the departmental matricule image and cite it. |
 | **Mémoire des hommes** — https://www.memoiredeshommes.sga.defense.gouv.fr/ | Military dead, service, resistance, deportation and conflict databases | Official military source; follow each result to its record/image. |
 | **Gallica** — https://gallica.bnf.fr/ | Newspapers, directories, books, military lists, maps and local histories | SRU/OAI/IIIF/OCR available; verify OCR on page image and cite ARK/page. |
 | **RetroNews** — https://www.retronews.fr/ | Historical French press | Manual/free/subscription mix. Article claims require correlation. |
@@ -120,7 +120,7 @@ civil`, `registres paroissiaux`, `naissances`, `baptêmes`, `mariages`, `décès
 | **Open Archieven** — https://www.openarchieven.nl/ | Dutch and Belgian participating archives; civil, population, church, notarial and other records | API/OAI/bulk/manual. Follow the source archive and scan. |
 | **WieWasWie** — https://www.wiewaswie.nl/ | Dutch civil and population records from participating archives | Manual/free/subscription features; cite source archive and act. |
 | **AlleFriezen** — https://allefriezen.nl/ | Friesland civil, church, population and notarial records | Manual; many scan links. Search patronymics and municipality variants. |
-| **Zeeuwen Gezocht** — https://www.zeeuwengezocht.nl/ | Zeeland civil, church, population, notarial and migration records | Manual/local archive index; verify scan. |
+| **Zeeuwen Gezocht** — https://www.zeeuwsarchief.nl/ | Zeeland civil, church, population, notarial and migration records | Manual/local archive index; verify scan. |
 | **Alle Groningers** — https://www.allegroningers.nl/ | Groningen civil, church and population sources | Manual/local index with scans where available. |
 | **Amsterdam, Rotterdam and Noord-Hollands Archief family-history portals** — https://www.amsterdam.nl/stadsarchief/ ; https://stadsarchief.rotterdam.nl/en/genealogy ; https://noord-hollandsarchief.nl/english/family-history | Local population registers, civil records, police cards, notarial records and migration | Official municipal/regional archives; retain the contributing archive and record reference. |
 | **Archieven.nl — Personen** — https://www.archieven.nl/nl/personen | Federated person search across many Dutch local and regional archives | Manual aggregator; open the contributing archive's record and scan. |
@@ -214,7 +214,7 @@ morte`, `allegati`, `processetti`, `indice decennale`, `registro parrocchiale`,
 | **Digitalarkivet (Norway)** — https://www.digitalarkivet.no/ | Church books, censuses, emigration, probate, property, court and military records | Free/manual; scans are primary surrogates, transcriptions are indexes. |
 | **Historisk befolkningsregister / National Library newspapers** — https://histreg.no/ ; https://www.nb.no/search?mediatype=aviser | Norwegian historical population links and digitized newspapers | Population links are derivative hypotheses; newspaper OCR is discovery evidence. Verify records/pages. |
 | **Gravminner i Norge** — https://www.slektogdata.no/gravminner | Norwegian cemetery/gravestone database | Derivative plus images; verify visible inscription/burial register. |
-| **Arkivalieronline / Rigsarkivet (Denmark)** — https://www.sa.dk/ao-soegesider/da/ | Church books, censuses, probate, military and archival scans | Free/manual; cite archive, parish, book/page. |
+| **Arkivalieronline / Rigsarkivet (Denmark)** — https://www.rigsarkivet.dk/ | Church books, censuses, probate, military and archival scans | Free/manual; cite archive, parish, book/page. |
 | **Copenhagen Police Register Sheets** — https://kbharkiv.dk/brug-samlingerne/kilder-paa-nettet/politiets-registerblade/ | Copenhagen residence, movement, occupation and household registration | Official city archive images/index; cite sheet and image. |
 | **Dansk Demografisk Database** — https://www.ddd.dda.dk/ | Danish census, emigration and selected transcriptions | Free/manual index; verify scan. |
 | **Kansallisarkisto Astia (Finland)** — https://astia.narc.fi/uusiastia/ | Finnish national archive catalog and digital records | Free/manual; Swedish and Russian-era terminology may apply. |
@@ -223,7 +223,7 @@ morte`, `allegati`, `processetti`, `indice decennale`, `registro parrocchiale`,
 | **Katiha (Finnish National Archives)** — https://katiha.kansallisarkisto.fi/ | Karelia parish-register transcriptions and searches | Official derivative index/manual; verify against the associated church-book image. |
 | **Finland's Family History Association** — https://www.sukuhistoria.fi/ | Church-book and other scans | Free/member/manual; cite original archive/book. |
 | **Tímarit.is (Iceland)** — https://timarit.is/ | Icelandic newspapers and periodicals | OCR/manual; verify page. |
-| **National Archives of Iceland** — https://skjalasafn.is/ | Census, church, probate and national archival guidance | Official/manual; local interfaces vary. |
+| **National Archives of Iceland** — https://island.is/s/thjodskjalasafn | Census, church, probate and national archival guidance | Official/manual; local interfaces vary. |
 | **Rahvusarhiiv AIS / Saaga (Estonia)** — https://ais.ra.ee/ ; https://www.ra.ee/dgs/explorer.php | Estonian archival catalog and digitized church, census, estate and personal records | Free/manual images; search German and Russian historical forms too. |
 | **DIGAR newspapers and open data (Estonia)** — https://dea.digar.ee/ ; https://data.digar.ee/ | Historical newspapers plus documented open datasets | OCR/data discovery; cite publication/page and verify scan. |
 | **Raduraksti (Latvia)** — https://raduraksti.arhivi.lv/ | Latvian church books, revision lists, censuses and related scans | Registration/manual; search Latvian, German and Russian names/places. |
@@ -250,7 +250,7 @@ morte`, `allegati`, `processetti`, `indice decennale`, `registro parrocchiale`,
 |---|---|---|
 | **Porta fontium** — https://www.portafontium.eu/ | Czech-Bavarian border archives and church books | Free/manual scans. |
 | **Acta Publica / Moravian Provincial Archive** — https://www.mza.cz/actapublica/ | Moravian parish-register images | Free/manual; cite archive, parish, book and image. |
-| **Czech regional archives** — https://www.mvcr.cz/archivy/ | Directory/routing for state regional archives | Official routing; portals differ by region. |
+| **Czech regional archives** — https://www.mv.gov.cz/archivy-3 | Directory/routing for state regional archives | Official routing; portals differ by region. |
 | **Slovak State Archives** — https://www.minv.sk/?statne-archivy-na-slovensku | Archive directory, church/civil, census, notarial and local records | Official/manual/request; many images also via FamilySearch. |
 | **Slovakiana — 1930 census sheets** — https://slovakiana.sk/scitacie-harky | Digitized 1930 Slovak census sheets where released | Official cultural portal/manual. Cite sheet, municipality and household. |
 | **Hungarian National Archives** — https://mnl.gov.hu/ | National/county archives, civil, church, census, nobility, military and maps | Official catalog/manual; route to county archive and historical county. |
@@ -310,7 +310,7 @@ query vocabulary, see [uk-ireland-local-sources.md](uk-ireland-local-sources.md)
 | **Welsh Newspapers Online** — https://newspapers.library.wales/ | Digitized Welsh newspapers | OCR/manual; verify page and search Welsh/English. |
 | **IrishGenealogy.ie** — https://www.irishgenealogy.ie/ | Irish civil and selected church records | Official/free/manual; image/privacy cutoffs vary. |
 | **National Archives of Ireland Genealogy** — https://genealogy.nationalarchives.ie/ | 1901/1911 census, wills, transportation, military/police and other datasets | Official/free/manual. |
-| **PRONI** — https://www.nidirect.gov.uk/proni | Northern Ireland eCatalogue, wills, valuation, street directories, estate and church records | Official/manual/archive request. |
+| **PRONI** — https://www.proni.gov.uk/ | Northern Ireland eCatalogue, wills, valuation, street directories, estate and church records | Official/manual/archive request. |
 | **PRONI name-search databases** — https://www.proni.gov.uk/name-search | Wills, pre-1858 diocesan indexes, coroners, Ulster Covenant, Freeholders and other named datasets | Official/manual index. Open the collection-specific record and retain reference. |
 | **UKBMD local indexes / Online Parish Clerks** — https://www.ukbmd.org.uk/ ; https://www.ukbmd.org.uk/online_parish_clerk | Local registrar indexes and county/parish volunteer projects | Discovery/derivative. Local indexes can expose register office and sub-district detail absent from GRO; verify the certificate/register. |
 | **RootsIreland / county genealogy centres** — https://www.rootsireland.ie/ | County-based church/civil transcriptions | Subscription/manual derivative index; verify image/certificate. |
@@ -347,7 +347,7 @@ an unmaintainable list of every county.
 | **BLM General Land Office Records** — https://glorecords.blm.gov/ | US federal land patents, survey plats and tract books | Official/manual images/data; useful for residence, associates and property identity, not direct kinship unless stated. |
 | **California Digital Newspaper Collection** — https://cdnc.ucr.edu/ | California historical newspapers | OCR/manual; verify page. |
 | **Library and Archives Canada Collection Search** — https://recherche-collection-search.bac-lac.gc.ca/eng/ | Federal census, immigration, military, land and archival records | Official/manual; cite MIKAN/item. |
-| **LAC provincial, territorial, and religious archive links** — https://www.canada.ca/en/library-archives/collection/research-help/genealogy-family-history/links.html | Current official routing page for provincial/territorial archives and civil/church record custodians | Search province for vital, land, probate and local-government records. |
+| **LAC provincial, territorial, and religious archive links** — https://www.canada.ca/en/library-archives/collection/research-help/genealogy-family-history/links.html (verify; page did not respond on 2026-09-01) | Current official routing page for provincial/territorial archives and civil/church record custodians | Search province for vital, land, probate and local-government records. |
 | **BAnQ Advitam / collections (Québec)** — https://advitam.banq.qc.ca/ | Québec civil/notarial, census, land, judicial and archival descriptions | Official/manual; French query terms and notarial districts matter. |
 | **Royal BC Museum genealogy search** — https://genealogy.royalbcmuseum.bc.ca/ | British Columbia historical birth, marriage, death, colonial marriage and baptism indexes | Official/manual. Order or inspect the registration where available. |
 | **Provincial Archives of New Brunswick databases** — https://archives.gnb.ca/Search/ | Vital, land, immigration, newspapers and government databases | Official/free/manual. |

@@ -1,6 +1,6 @@
 # Genealogy Source Access Catalog
 
-Reviewed: 2026-08-31. Interfaces and terms change; re-check the linked official documentation before automating.
+Reviewed: 2026-09-01. Interfaces and terms change; re-check the linked official documentation before automating.
 
 This catalog answers two separate questions:
 1. **Where might the evidence exist?**
@@ -60,23 +60,22 @@ A service's tree, hint, transcription, OCR, or index is not automatically eviden
 | **DigitalNZ** | API v3: https://digitalnz.org/developers/api-docs-v3 | New Zealand cultural, government, newspaper, image, audio, and archival metadata | Public content can be queried without a key at lower limits; keys are recommended for regular/high-volume use. DigitalNZ is an aggregator—follow the source record. |
 | **Papers Past** | Search: https://paperspast.natlib.govt.nz/ ; programmatic discovery through DigitalNZ: https://digitalnz.org/developers | New Zealand newspapers, magazines, letters/diaries, parliamentary papers | Use DigitalNZ for metadata discovery; verify OCR on Papers Past page images and retain publication/date/page. |
 | **Europeana** | APIs: https://www.europeana.eu/en/apis ; API portal: https://api.europeana.eu/ | European archival, library, museum, newspaper, image, and manuscript metadata | Mostly read-only search/record interfaces; API key may be required. Rights vary per item. Follow `edm:isShownAt`/provider links to the holding institution. |
-| **Archives Portal Europe** | Portal: https://www.archivesportaleurope.net/ | Finding aids and archival descriptions from European institutions | Excellent for locating fonds/series/units; descriptions do not imply digitized name-level records. See the constrained-interface note below; link to the holding archive and retain reference codes. |
 | **Gallica / Bibliothèque nationale de France** | API hub: https://api.bnf.fr/ ; search, OAI, OCR, document, and IIIF services: https://api.bnf.fr/fr/api-document-de-gallica | French books, newspapers, directories, maps, manuscripts, images | Use ARK identifiers. OCR is discoverability evidence only; verify on the scan. Rights/reuse are item-specific. |
-| **Swedish National Archives (Riksarkivet)** | API overview: https://sok.riksarkivet.se/data-api/api ; terms: https://sok.riksarkivet.se/data-api/api/anvandarvillkor-api ; datasets: https://sok.riksarkivet.se/data-api/nedladdningsbara-datamangder/ | Search API, OAI-PMH, IIIF, linked-data representations, archival descriptions and selected open datasets | Some interfaces are beta or dataset-specific. Preserve archive/volume/image identifiers and inspect the underlying image. |
+| **Swedish National Archives (Riksarkivet)** | API overview: https://sok.riksarkivet.se/en/data-api (verify current path; older /data-api/api URLs did not respond on 2026-09-01) | Search API, OAI-PMH, IIIF, linked-data representations, archival descriptions and selected open datasets | Some interfaces are beta or dataset-specific. Preserve archive/volume/image identifiers and inspect the underlying image. |
 
 ### Machine interfaces with constrained or uncertain scope
 
 | Service | Interface | Scope | Access and reliability notes |
 |---|---|---|---|
 | **The National Archives (UK) Discovery** | API terms and help entry: https://www.nationalarchives.gov.uk/terms-and-conditions/discovery-for-developers-about-the-application-programming-interface-api/ | UK central-government and contributed archive catalog descriptions | A documented Discovery API exists, but it is principally a catalogue interface. Confirm the current endpoint/help before implementation, obey its terms, and capture catalogue references. A description of a file or series is not proof of a personal event. |
-| **Archives Portal Europe** | Metadata guidance: https://www.archivesportaleurope.net/metadata-usage-guidelines/ | European archival finding aids | The portal confirms an API and recommends API use/linking, but its current consumer endpoint/schema was not reliably discoverable during this review. Do not invent an endpoint; use the portal manually until current docs are confirmed. |
+| **Archives Portal Europe** | Metadata guidance: https://www.archivesportaleurope.net/metadata-usage-guidelines/ | European archival finding aids | The portal recommends API use, but the consumer endpoint/schema was not confirmed in this review. Do not invent an endpoint; use the portal manually and link to the holding archive with its reference code. |
 | **Findmypast developer interfaces** | Public documentation repository: https://github.com/findmypast/public_docs | Selected Findmypast integration APIs | Availability to a repository does not imply open access to record content. Treat as partner/approved access unless Findmypast grants credentials and scope; ordinary research remains browser/subscription based. |
 
 ### Poland and Central Europe machine access
 
 | Service | Interface | Scope | Access and reliability notes |
 |---|---|---|---|
-| **Szukaj w Archiwach (Polish State Archives)** | Portal: https://www.szukajwarchiwach.gov.pl/ ; public file metadata/download endpoints are described in this skill's parish workflow | Polish archival descriptions and digitized scans | Authoritative for holdings and images. Record `zespół`, series, unit/sygnatura, unit ID, file/image ID, and image position. The file endpoints are treated here as observed public interfaces, not a guaranteed stable developer API. |
+| **Szukaj w Archiwach (Polish State Archives)** | Portal: https://www.szukajwarchiwach.gov.pl/ ; file metadata/download endpoints observed in the browser are undocumented | Polish archival descriptions and digitized scans | Authoritative for holdings and images. Record `zespół`, series, unit/sygnatura, unit ID, file/image ID, and image position. The file endpoints are treated here as observed public interfaces, not a guaranteed stable developer API. |
 | **Archives Portal Europe / Europeana** | APIs above | Finding aids from Poland, Czechia, Hungary, Baltics and other contributors | Useful when national portals are difficult to search programmatically; always resolve to the holding archive. |
 | **Matricula Online** | Portal: https://data.matricula-online.eu/ ; project information: https://www.icar-us.eu/en/cooperation/online-portals/matricula/ | Church-register images across participating European dioceses/archives | No general public search API is relied upon here. Use manual navigation and stable archive/parish/book/page identifiers; obey image rights. |
 
@@ -100,7 +99,7 @@ Do not infer permission to scrape from the absence of an API. For these services
 |---|---|---|---|
 | **Ancestry** — https://www.ancestry.com/ | Manual/subscription; user GEDCOM and record downloads where offered | Censuses, immigration, military, vital records, newspapers, user trees and hints | No general public research API is documented here. Ancestry terms restrict automated scraping; use browser/export. Hints and member trees are leads. |
 | **MyHeritage** — https://www.myheritage.com/ | Manual/subscription; user GEDCOM/export where offered; partner integrations by agreement | International historical records, trees, newspapers, DNA matching | Do not automate private/internal endpoints. Verify Smart Matches and Record Matches against underlying records. |
-| **YourRoots** — https://yourroots.com/ | Manual/account; GEDCOM upload; user-facing AI research and hints; provider-approved access by written agreement | GEDCOM mapping, FamilySearch-connected tree/record hints, AI Ancestor Finder, deep-research reports, cross-platform DNA matching | YourRoots explicitly describes AI results as research leads with source links. Stas reports that the founder welcomes genealogical research use, making it a strong candidate for a formal research/API partnership. However, the current Terms (https://genomelink.io/legal/terms-of-use) prohibit robots, automatic devices, AI agents, and crawlers unless expressly authorized in writing, and `https://yourroots.com/robots.txt` disallows search/result routes. Until written authorization or a documented API exists, use the normal account/browser workflow and user exports only. Never upload another person's GEDCOM or DNA without authority/consent. |
+| **YourRoots** — https://yourroots.com/ | Manual/account; GEDCOM upload and user exports only | GEDCOM mapping, FamilySearch-connected hints, AI research leads, DNA matching | Terms prohibit bots and AI agents without written authorization; no public API. AI output is a lead, not evidence. |
 | **Findmypast** — https://www.findmypast.com/ | Manual/subscription/export where offered | UK/Ireland censuses, parish records, newspapers, military and migration | No general public research API is relied upon here. Use browser and licensed downloads. |
 | **Geneanet** — https://en.geneanet.org/ | Manual/free/subscription; GEDCOM import/export for owned trees | European user trees, indexed collections, archival projects | User trees are lead generators; cite original records. |
 | **Geni** — https://www.geni.com/ | Manual/shared-tree workflows; documented OAuth API for approved applications | Collaborative world tree | Profile claims need underlying sources and identity reconciliation. See the API row above. |
@@ -129,7 +128,7 @@ Do not infer permission to scrape from the absence of an API. For these services
 | **The National Archives Discovery** — https://discovery.nationalarchives.gov.uk/ | Manual/API only when current official Discovery documentation grants it | UK central government and 2,500+ archive catalog descriptions; military, migration, probate and courts. Capture catalogue references. |
 | **IrishGenealogy.ie** — https://www.irishgenealogy.ie/ | Manual/free | Irish civil and church records; image access and privacy cutoffs vary. |
 | **National Archives of Ireland Genealogy** — https://genealogy.nationalarchives.ie/ | Manual/free | Censuses, valuation, wills, military/police and other datasets. |
-| **PRONI** — https://www.nidirect.gov.uk/proni | Manual/free and archive request | Northern Ireland wills, valuation, directories, church and estate records. |
+| **PRONI** — https://www.proni.gov.uk/ | Manual/free and archive request | Northern Ireland wills, valuation, directories, church and estate records. |
 | **RootsIreland** — https://www.rootsireland.ie/ | Manual/subscription | Irish church and civil transcriptions. Verify against images/certificates. |
 
 ### Continental Europe
@@ -142,7 +141,7 @@ Do not infer permission to scrape from the absence of an API. For these services
 | **German Federal Archives** — https://www.bundesarchiv.de/EN/Navigation/Home/home.html | Catalog/manual request | Military, citizenship, displaced persons and federal records; privacy/access rules apply. |
 | **French departmental archives** — directory: https://francearchives.gouv.fr/fr/annuaire/departements | Manual; some departments expose IIIF/OAI independently | Parish and civil registers, censuses, military recruitment, notarial and land records. Interfaces and reuse terms vary by department. |
 | **WieWasWie** — https://www.wiewaswie.nl/en/ | Manual/subscription features | Dutch civil and population records. Prefer Open Archives API for lawful automation where the same archives participate. |
-| **Danish National Archives / Arkivalieronline** — https://www.sa.dk/en/ | Manual/free; datasets as separately published | Church books, censuses, probate and military records. |
+| **Danish National Archives / Arkivalieronline** — https://www.rigsarkivet.dk/en/ | Manual/free; datasets as separately published | Church books, censuses, probate and military records. |
 | **Norwegian Digital Archives (Digitalarkivet)** — https://www.digitalarkivet.no/en/ | Manual/free; official downloads where offered | Norwegian censuses, church books, emigration, probate, military and other archives. No supported general read/search API was verified in this review; do not reverse-engineer site services. Check transcriptions against scans. |
 | **National Archives of Finland / Astia** — https://astia.narc.fi/uusiastia/ | Manual/free; open datasets as separately published | Finnish church, military, court, map and administrative holdings. |
 | **Porta fontium** — https://www.portafontium.eu/ | Manual/free | Czech-Bavarian archival material and parish registers. |
@@ -188,7 +187,7 @@ Do not infer permission to scrape from the absence of an API. For these services
 | **Volksbund grave search** — https://www.volksbund.de/en/erinnern-gedenken/gravesearch-online | Manual/registration | German war dead and burial data. |
 | **Fold3** — https://www.fold3.com/ | Manual/subscription | US and international military indexes/images. Verify service file image and identifiers. |
 | **Find a Grave** — https://www.findagrave.com/ | Manual/free | User memorials and cemetery photographs. Memorial text is derivative; distinguish headstone transcription from contributor claims. |
-| **BillionGraves** — https://billiongraves.com/ | Manual/free/subscription features; partner access by agreement | GPS-tagged cemetery images/transcriptions. Verify the image and cemetery. |
+| **BillionGraves** — https://billiongraves.com/ | Manual/free/subscription features; partner access by agreement (site did not respond to automated check on 2026-09-01) | GPS-tagged cemetery images/transcriptions. Verify the image and cemetery. |
 | **Newspapers.com** — https://www.newspapers.com/ | Manual/subscription | Historical newspaper OCR and images. Cite newspaper, date, page, column, and clipping/image. |
 | **British Newspaper Archive** — https://www.britishnewspaperarchive.co.uk/ | Manual/subscription | British and Irish newspapers. Verify OCR on page image. |
 | **Google Newspaper Archive** — https://news.google.com/newspapers | Manual/free, incomplete | Scanned newspapers with inconsistent metadata/search. |

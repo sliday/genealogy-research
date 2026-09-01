@@ -1,6 +1,6 @@
 # UK & Ireland local genealogy source catalog
 
-Scope: local, governmental, archival, and volunteer databases to query **in addition to** global aggregators. URLs and access notes checked 31 August 2026. “Evidence role” distinguishes discovery aids and transcriptions from images/certificates that reproduce or certify an original record.
+Scope: local, governmental, archival, and volunteer databases to query **in addition to** global aggregators. URLs and access notes checked 1 September 2026. “Evidence role” distinguishes discovery aids and transcriptions from images/certificates that reproduce or certify an original record.
 
 ## Evidence-use rules for an agent
 

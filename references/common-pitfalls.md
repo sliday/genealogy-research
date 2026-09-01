@@ -1,5 +1,7 @@
 # Common Pitfalls in Genealogy Research
 
+Reviewed: 2026-09-01.
+
 ## Table of Contents
 - [Document and Record Issues](#document-and-record-issues)
 - [Database and Indexing Issues](#database-and-indexing-issues)
@@ -15,7 +17,7 @@
 ### Damaged or Illegible Scans
 - 19th-century books often damaged by mold, water, fire, insects
 - Multiple experts may give different readings of the same word
-- **Guideline:** Trust indexers who worked with originals over AI scan analysis. If uncertain, mark as "Possible" and note the ambiguity
+- **Guideline:** Rank readings: register image inspected by a human, then an indexer who worked from the original, then AI/OCR reading of a scan. If readings disagree, mark the value "Possible" and note the ambiguity
 
 ### Language Switches in Records
 - Same parish may switch languages across time periods:
@@ -112,7 +114,7 @@
 
 ### Julian vs. Gregorian Calendar
 - Russia used Julian calendar until **February 14, 1918** (= Feb 1 Julian)
-- Difference: +12 days (19th century), +13 days (20th century)
+- Difference: +11 days (18th century), +12 days (19th century), +13 days (20th century)
 - Church records in Russian Empire: Julian dates
 - Civil records in Austrian Empire: Gregorian dates
 - **When converting, note which calendar in your records**

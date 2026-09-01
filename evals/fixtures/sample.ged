@@ -1,0 +1,40 @@
+0 HEAD
+1 GEDC
+2 VERS 5.5.1
+1 CHAR UTF-8
+0 @I1@ INDI
+1 NAME Jan /Kulesza/
+1 SEX M
+1 BIRT
+2 DATE 15 MAR 1879
+2 PLAC Korzeniówka, Dołubowo
+2 SOUR @S1@
+3 PAGE act 28, 1879
+1 DEAT
+2 DATE ABT 1945
+1 FAMS @F1@
+0 @I2@ INDI
+1 NAME Marianna /Dembska/
+1 SEX F
+1 BIRT
+2 DATE 1881
+1 FAMS @F1@
+0 @I3@ INDI
+1 NAME Anna /Kulesza/
+1 SEX F
+1 BIRT
+2 DATE 4 JUN 1950
+1 FAMC @F1@
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 CHIL @I3@
+1 MARR
+2 DATE 26 NOV 1902
+2 SOUR @S9@
+0 @S1@ SOUR
+1 TITL Akta stanu cywilnego parafii Dołubowo
+1 REPO @R1@
+0 @R1@ REPO
+1 NAME Archiwum Państwowe w Białymstoku
+0 TRLR

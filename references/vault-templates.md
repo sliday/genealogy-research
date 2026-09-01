@@ -1,8 +1,10 @@
 # Obsidian Vault Templates for Genealogy Research
 
+Reviewed: 2026-09-01. Status values are the five from SKILL.md: Proven, Probable, Possible, Unresolved, Disproven.
+
 ## Person File Template
 
-Create one file per person in `Chronicles/People/`:
+Create one file per person in `vault/People/`:
 
 ```yaml
 ---
@@ -21,18 +23,18 @@ death_place: "[[Place Name]]"
 father: "[[Father Name]]"
 mother: "[[Mother Name (Maiden Name)]]"
 spouse: "[[Spouse Name]]"
-evidence_level: proven
+evidence_level: proven   # proven | probable | possible | unresolved | disproven
 ---
 
 # Firstname Lastname
 
 ## Biographical Data
-| Field | Value | Source | Evidence |
-|-------|-------|--------|----------|
-| Birth | 1879-03-15, Korzeniówka | Geneteka, Dołubowo, act #28, 1879 | Proven |
+| Field | Value | Source | Status |
+|-------|-------|--------|--------|
+| Birth | 1879-03-15, Korzeniówka | Geneteka index + register image, Dołubowo, act #28, 1879 | Proven |
 | Baptism | 1879-03-17 | same source | Proven |
 | Marriage | 1902-11-26 | SzukajWArchiwach, Boćki, act #39, 1902 | Proven |
-| Death | ~1945 | family oral history | Unproven |
+| Death | ~1945 | family oral history | Possible |
 
 ## Parents
 - Father: [[Father Name]]
@@ -55,7 +57,7 @@ evidence_level: proven
 
 ## Place File Template
 
-Create in `Chronicles/Places/`:
+Create in `vault/Places/`:
 
 ```yaml
 ---
@@ -89,7 +91,7 @@ historical_region: Podlasie
 
 ## Document File Template
 
-Create in `Chronicles/Documents/`:
+Create in `vault/Documents/`:
 
 ```yaml
 ---
@@ -102,7 +104,7 @@ date: 1879-03-15
 parish: Dołubowo
 archive: "Archiwum Państwowe w Białymstoku"
 source_url: "https://..."
-scan_file: "materials/skany/filename.jpg"
+scan_file: "sources/filename.jpg"
 ---
 
 # Document Description
@@ -130,6 +132,72 @@ scan_file: "materials/skany/filename.jpg"
 - [Observations about handwriting, damage, unusual entries]
 ```
 
+## Event File Template
+
+Create in `vault/Events/` for migrations, wars, epidemics, parish closures, border changes:
+
+```yaml
+---
+title: Event Name
+tags:
+  - event
+  - migration
+date_start: 1905-04
+date_end: 1905-06
+places:
+  - "[[Place Name]]"
+people:
+  - "[[Person Name]]"
+evidence_level: probable
+---
+
+# Event Name
+
+## What happened
+[One paragraph: who, where, when, why it matters for the family]
+
+## Evidence
+| Claim | Source | Status |
+|-------|--------|--------|
+| Family left village X | Passenger manifest, ship Y, line 12 | Proven |
+
+## Effects on research
+- [Which parish/archive/jurisdiction to search after this event]
+```
+
+## Research Note Template
+
+Create in `vault/Research/` for one bounded question:
+
+```yaml
+---
+title: "Question: parents of Firstname Lastname"
+tags:
+  - research
+status: open   # open | answered | parked
+people:
+  - "[[Firstname Lastname]]"
+---
+
+# Question
+
+[One sentence]
+
+## What is known
+- [Fact] — [source] — [status]
+
+## Candidates
+| Candidate | For | Against | Status |
+|-----------|-----|---------|--------|
+
+## Searches
+| Date | Source / collection | Parameters | Coverage | Result |
+|------|---------------------|------------|----------|--------|
+
+## Conclusion
+[Status and reasoning, or "open" with the next step]
+```
+
 ## PROCESS.md Template
 
 Maintain this file at the project root:
@@ -143,7 +211,8 @@ Maintain this file at the project root:
 ## Completed Actions
 ### [Date]: [Topic]
 - [x] Action — result (source)
-- [x] Action — 0 records found (NEGATIVE RESULT — eliminates possibility X)
+- [x] Action — 0 records found; coverage confirmed for years/parish/variants (NEGATIVE EVIDENCE — eliminates possibility X)
+- [x] Action — 0 records found; coverage unknown (NOT negative evidence; check coverage table)
 
 ### [Date]: [Topic]
 - [x] Action — result
@@ -158,7 +227,7 @@ Maintain this file at the project root:
 - [ ] Specific action
 
 ## Key Findings
-| Finding | Evidence Level | Source | Date Found |
+| Finding | Status | Source | Date Found |
 |---------|---------------|--------|------------|
 | X is son of Y | Proven | Birth record, act #N | 2026-03-22 |
 | A married B | Probable | Index only, no scan | 2026-03-22 |
@@ -168,17 +237,18 @@ Maintain this file at the project root:
 2. [Question] — what would resolve it, where to look
 
 ## Dead Ends
-| Question | Searched | Result | Date |
-|----------|----------|--------|------|
-| Birth of X | Geneteka (parish Y, 1840-1860) | 0 results | 2026-03-22 |
+| Question | Searched | Variants | Coverage | Result | Date |
+|----------|----------|----------|----------|--------|------|
+| Birth of X | Geneteka (parish Y, births 1840–1860) | X, Xa, Кс | Parish indexed 1840–1860 complete | 0 results — negative evidence | 2026-03-22 |
+| Birth of Z | Geneteka (parish Y, births 1870–1880) | Z | Not indexed after 1868 | 0 results — coverage gap, not negative | 2026-03-22 |
 ```
 
-## AGENT.md Template
+## SOURCES.md Template
 
 Maintain this file at the project root:
 
 ```markdown
-# Research Resources: [Family Name]
+# Research Sources: [Family Name]
 
 ## Online Databases
 | Service | URL | What it Contains | Access | Notes |
