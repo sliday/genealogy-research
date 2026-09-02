@@ -78,6 +78,9 @@ and post-write validation, follow
 [references/gedcom-enrichment-workflow.md](references/gedcom-enrichment-workflow.md).
 Run `python3 scripts/gedcom_check.py FILE.ged` before and after any GEDCOM edit; it
 reports record counts, dangling cross-references, and assertions without a citation.
+For browser tools that repair encoding, structure, duplicates, and privacy in a `.ged`
+file — plus the order to run them in and the limits of what they prove — use
+[references/gedcom-tools-catalog.md](references/gedcom-tools-catalog.md).
 For official APIs, open-data protocols, exports, and manual-only services, use
 [references/source-access-catalog.md](references/source-access-catalog.md).
 For country-, province-, department-, diocese-, and society-level databases plus

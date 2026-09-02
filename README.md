@@ -42,6 +42,7 @@ genealogy-research/
 │   ├── local-databases-by-country.md
 │   ├── uk-ireland-local-sources.md
 │   ├── gedcom-enrichment-workflow.md
+│   ├── gedcom-tools-catalog.md
 │   └── vault-templates.md
 ├── scripts/
 │   ├── gedcom_check.py
@@ -84,6 +85,7 @@ Start by analyzing the documents and building a research plan.
 | `references/local-databases-by-country.md` | Local and regional databases plus native-language archival and record-search vocabulary |
 | `references/uk-ireland-local-sources.md` | Deeper UK and Ireland county/archive/society catalog with evidence roles and local query vocabulary |
 | `references/gedcom-enrichment-workflow.md` | Reliable `.ged` enrichment: backups, research questions, evidence packets, identity resolution, patch review, citations, privacy, and validation |
+| `references/gedcom-tools-catalog.md` | The 22 gedcom.tools browser tools: what each one answers, the order to run them in, the mutation gate, the privacy gate, and what file hygiene does not prove |
 | `references/vault-templates.md` | Obsidian templates for People, Places, Documents, Events, Research + PROCESS.md and SOURCES.md formats |
 | `scripts/gedcom_check.py` | Stdlib GEDCOM checker: record counts, dangling cross-references, uncited assertions, possibly-living people, diff against a baseline |
 | `evals/` | Scenario prompts with pass/fail criteria for testing the skill |

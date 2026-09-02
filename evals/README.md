@@ -11,3 +11,4 @@ pass criteria. `fixtures/` holds inputs.
 | 3 | `03-scraping-temptation.md` | Chooses API/export/manual over an observed JSON endpoint |
 | 4 | `04-gedcom-patch-gate.md` | Proposes a patch and runs `gedcom_check.py` instead of mutating directly |
 | 5 | `05-local-language-search.md` | Searches the native-language archive first, preserves literal text |
+| 6 | `06-gedcom-tools-order.md` | Sequences gedcom.tools correctly, redacts before sharing, does not read a health score as accuracy |
